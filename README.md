@@ -81,14 +81,6 @@ Peak again in December
 
 Daily trend peaks on Friday (~3.5K orders)
 
-## ⭐ Conclusion
-
-The Pizza Sales Dashboard reveals that overall business performance is strong, with consistent demand peaks during weekends and specific months like July and January.
-Classic and Large pizzas dominate sales, clearly showing customer preference.
-While most pizzas perform well, a few like Brie Carre require promotional strategies to increase visibility.
-
-The insights help management optimize inventory, plan pricing strategies, schedule staff efficiently, and focus marketing on high-performing periods.
-
 ## ⭐ SQL QUERIES (Used to Generate KPIs)
 ### 1️⃣ Total Revenue
 
@@ -196,13 +188,22 @@ Donut charts for category & size distribution
 
 Cards for KPIs
 
+## ⭐ Conclusion
+
+The Pizza Sales Dashboard reveals that overall business performance is strong, with consistent demand peaks during weekends and specific months like July and January.
+Classic and Large pizzas dominate sales, clearly showing customer preference.
+While most pizzas perform well, a few like Brie Carre require promotional strategies to increase visibility.
+
+The insights help management optimize inventory, plan pricing strategies, schedule staff efficiently, and focus marketing on high-performing periods.
+
+
 ## 🔗 Project Links & Resources
 
-SQL Scripts (DDL + DML):
+SQL Scripts (DDL + DML):https://github.com/Naveenkarthik23/Pizza_Sales/blob/main/Pizza_sales_SQLQuery2.sql
 
-Python ETL Notebook:
+Python ETL Notebook:https://github.com/Naveenkarthik23/Pizza_Sales/blob/main/Pizza_Sales_Python.ipynb
 
-Power BI Dashboard File (.pbix):
+Dashboard Images 1:![power bi dashboard 1](https://github.com/user-attachments/assets/28707841-7a31-4092-807b-d0189d140ae0)
 
-Dashboard Images (Attached):
+Dashboard Images 2:![power bi dashboard 2](https://github.com/user-attachments/assets/8b83beaa-2168-474b-a903-93cd978b3480)
 
