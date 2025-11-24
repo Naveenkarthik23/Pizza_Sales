@@ -32,7 +32,7 @@ Avg Pizza Per Order	Total pizzas / orders	2.32 pizzas per order
 Top Pizza Size	Size that generates highest sales	Large size is the best performer
 Top Category	Pizza category with highest contribution	Classic pizzas lead in revenue & orders
 ## ⭐ Insights From Dashboard (Based on the Images)
-📌 1. Busiest Days & Months
+### 📌 1. Busiest Days & Months
 
 Friday & Saturday have highest order volumes
 
@@ -42,7 +42,7 @@ July and January show peak monthly sales
 
 Seasonal demand affects ordering behavior
 
-📌 2. Sales Performance
+### 📌 2. Sales Performance
 
 Classic Pizzas dominate both revenue and order count
 
@@ -50,7 +50,7 @@ Large size pizzas contribute 45% of total sales
 
 Veggie & Supreme categories also perform well
 
-📌 3. Best Sellers
+### 📌 3. Best Sellers
 
 Best Selling Pizza by Revenue:
 ✔ Thai Chicken Pizza
@@ -61,7 +61,7 @@ Best Selling Pizza by Quantity:
 Best by Total Orders:
 ✔ Classic Deluxe Pizza
 
-📌 4. Worst Sellers
+### 📌 4. Worst Sellers
 
 Least Revenue Generator:
 ✘ Brie Carre Pizza
@@ -71,7 +71,7 @@ Least Sold by Quantity:
 
 *Bottom 5 pizzas also include Spinach, Mediterranean, etc.
 
-📌 5. Trend Insights
+### 📌 5. Trend Insights
 
 Monthly sales rise from Feb → July
 
@@ -81,7 +81,7 @@ Peak again in December
 
 Daily trend peaks on Friday (~3.5K orders)
 
-⭐ Conclusion
+## ⭐ Conclusion
 
 The Pizza Sales Dashboard reveals that overall business performance is strong, with consistent demand peaks during weekends and specific months like July and January.
 Classic and Large pizzas dominate sales, clearly showing customer preference.
@@ -89,42 +89,50 @@ While most pizzas perform well, a few like Brie Carre require promotional strate
 
 The insights help management optimize inventory, plan pricing strategies, schedule staff efficiently, and focus marketing on high-performing periods.
 
-⭐ SQL QUERIES (Used to Generate KPIs)
-1️⃣ Total Revenue
+## ⭐ SQL QUERIES (Used to Generate KPIs)
+### 1️⃣ Total Revenue
+
 SELECT ROUND(SUM(total_price),2) AS total_revenue
 FROM orders;
 
-2️⃣ Average Order Value
+### 2️⃣ Average Order Value
+
 SELECT ROUND(SUM(total_price) / COUNT(order_id), 2) AS avg_order_value
 FROM orders;
 
-3️⃣ Total Pizzas Sold
+### 3️⃣ Total Pizzas Sold
+
 SELECT SUM(quantity) AS total_pizza_sold
 FROM order_details;
 
-4️⃣ Total Orders
+### 4️⃣ Total Orders
+
 SELECT COUNT(order_id) AS total_orders
 FROM orders;
 
-5️⃣ Daily Trend (Orders per Day)
+### 5️⃣ Daily Trend (Orders per Day)
+
 SELECT DAYNAME(order_date) AS day, COUNT(order_id) AS total_orders
 FROM orders
 GROUP BY DAYNAME(order_date)
 ORDER BY total_orders DESC;
 
-6️⃣ Monthly Trend
+### 6️⃣ Monthly Trend
+
 SELECT MONTHNAME(order_date) AS month, COUNT(order_id) AS total_orders
 FROM orders
 GROUP BY MONTH(order_date)
 ORDER BY MONTH(order_date);
 
-7️⃣ Sales by Category
+### 7️⃣ Sales by Category
+
 SELECT pizza_category, SUM(quantity) AS total_sold
 FROM pizzas p
 JOIN order_details od ON p.pizza_id = od.pizza_id
 GROUP BY pizza_category;
 
-8️⃣ Top 5 Best Sellers by Revenue
+### 8️⃣ Top 5 Best Sellers by Revenue
+
 SELECT p.pizza_name, SUM(od.quantity * p.price) AS revenue
 FROM pizzas p
 JOIN order_details od ON p.pizza_id = od.pizza_id
@@ -132,8 +140,8 @@ GROUP BY p.pizza_name
 ORDER BY revenue DESC
 LIMIT 5;
 
-⭐ Python Code (ETL + KPIs)
-🔹 Load, Clean, Transform Data
+## ⭐ Python Code (ETL + KPIs)
+### 🔹 Load, Clean, Transform Data
 import pandas as pd
 
 orders = pd.read_csv("orders.csv")
@@ -143,24 +151,24 @@ pizzas = pd.read_csv("pizzas.csv")
 orders['order_date'] = pd.to_datetime(orders['order_date'])
 orders.drop_duplicates(inplace=True)
 
-# Merge Data
+### 🔹Merge Data
 df = details.merge(pizzas, on='pizza_id')
 df = df.merge(orders, on='order_id')
 
 df['total_price'] = df['quantity'] * df['price']
 
-🔹 KPI Calculations
+### 🔹 KPI Calculations
 total_revenue = df['total_price'].sum()
 avg_order_value = total_revenue / df['order_id'].nunique()
 total_pizzas_sold = df['quantity'].sum()
 total_orders = df['order_id'].nunique()
 avg_pizza_per_order = total_pizzas_sold / total_orders
 
-🔹 Daily & Monthly Trends
+### 🔹 Daily & Monthly Trends
 daily_trend = orders.groupby(orders['order_date'].dt.day_name())['order_id'].count()
 monthly_trend = orders.groupby(orders['order_date'].dt.month_name())['order_id'].count()
 
-⭐ Power BI Work Done
+## ⭐ Power BI Work Done
 
 Created star schema using fact and dimension tables
 
@@ -188,10 +196,13 @@ Donut charts for category & size distribution
 
 Cards for KPIs
 
-🔗 Project Links & Resources
+## 🔗 Project Links & Resources
 
 SQL Scripts (DDL + DML):
+
 Python ETL Notebook:
+
 Power BI Dashboard File (.pbix):
+
 Dashboard Images (Attached):
 
