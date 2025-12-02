@@ -161,20 +161,63 @@ avg_pizza_per_order = total_pizzas_sold / total_orders
 daily_trend = orders.groupby(orders['order_date'].dt.day_name())['order_id'].count()
 monthly_trend = orders.groupby(orders['order_date'].dt.month_name())['order_id'].count()
 
+## 📘 Excel Dashboard
+### ✔ What was done in Excel?
 
+Created pivot tables for Revenue, Orders, Category Performance
 
+Developed slicers for Category, Size, Month
 
+Built KPI cards using cell formulas
 
+Designed a clean Excel dashboard using shapes, charts & formatting
 
+Used conditional formatting for highlighting best/worst categories
 
+### ✔ Excel Outputs Include:
 
+Monthly Revenue Trend
 
+Category-wise & Size-wise Sales
 
+Top and Bottom Pizza Sales
 
+Interactive filters
 
+This shows strong Excel BI & visualization skills.
 
+### Excel Dashboard Images
+![Excel dashboard](https://github.com/user-attachments/assets/f4a9e1cb-8f7f-411b-91a8-3f1aa9ec99f4)
 
+## 📊 Tableau Dashboard (Added for GitHub)
+### ✔ Tableau Features Included
 
+Dynamic trend lines
+
+Interactive filters for Date, Category, Size
+
+Highlight tables for top/worst pizza analysis
+
+Doughnut charts for category breakdown
+
+Hourly order heatmaps
+
+Smooth professional UI with hover tooltips
+
+### ✔ Tableau Insights
+
+Weekly order performance
+
+Time-of-day peak purchase behavior
+
+Revenue contribution across product mix
+
+Customer purchase patterns
+
+This demonstrates your strength in advanced BI tools beyond Power BI.
+
+### Tableau Dashboard Image
+<img width="1546" height="875" alt="Tableau Dashboard" src="https://github.com/user-attachments/assets/3c1db814-4654-48a6-871f-4bd4afd12282" />
 
 ## ⭐ Power BI Work Done
 
@@ -185,8 +228,7 @@ Built DAX measures for revenue, AOV, and trends:
 Total Revenue = SUM(order_details[total_price])
 Avg Order Value = [Total Revenue] / DISTINCTCOUNT(orders[order_id])
 
-
-Added slicers for:
+### Added slicers for:
 
 Pizza Category
 
@@ -194,7 +236,7 @@ Date Range
 
 Pizza Size
 
-Used:
+### Used:
 
 Line charts for monthly trends
 
@@ -203,6 +245,12 @@ Bar charts for top/bottom pizzas
 Donut charts for category & size distribution
 
 Cards for KPIs
+### PowerBI Dashboard Image -1
+![power bi dashboard 1](https://github.com/user-attachments/assets/71d996d0-3ebc-4f3e-9e17-9a549bdda3c8)
+
+### PowerBI Dashboard Image -2
+![power bi dashboard 2](https://github.com/user-attachments/assets/42eca586-91fb-468e-9aef-456b30369f6e)
+
 
 ## ⭐ Conclusion
 
@@ -219,7 +267,6 @@ SQL Scripts (DDL + DML):https://github.com/Naveenkarthik23/Pizza_Sales/blob/main
 
 Python ETL Notebook:https://github.com/Naveenkarthik23/Pizza_Sales/blob/main/Pizza_Sales_Python.ipynb
 
-Dashboard Images 1:![power bi dashboard 1](https://github.com/user-attachments/assets/28707841-7a31-4092-807b-d0189d140ae0)
 
 Dashboard Images 2:![power bi dashboard 2](https://github.com/user-attachments/assets/8b83beaa-2168-474b-a903-93cd978b3480)
 
