@@ -1,4 +1,5 @@
-# ⭐ Pizza Sales Data Analytics Project – End-to-End Case Study
+# 🍕 Pizza Sales Analysis – End-to-End Project
+### Power BI | SQL | Python | Excel | Tableau
 ## 📌 Project Description
 
 This project analyzes two years of pizza sales data using Power BI, MySQL, and Python.
@@ -159,6 +160,21 @@ avg_pizza_per_order = total_pizzas_sold / total_orders
 ### 🔹 Daily & Monthly Trends
 daily_trend = orders.groupby(orders['order_date'].dt.day_name())['order_id'].count()
 monthly_trend = orders.groupby(orders['order_date'].dt.month_name())['order_id'].count()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## ⭐ Power BI Work Done
 
