@@ -260,13 +260,5 @@ While most pizzas perform well, a few like Brie Carre require promotional strate
 
 The insights help management optimize inventory, plan pricing strategies, schedule staff efficiently, and focus marketing on high-performing periods.
 
-
-## 🔗 Project Links & Resources
-
-SQL Scripts (DDL + DML):https://github.com/Naveenkarthik23/Pizza_Sales/blob/main/Pizza_sales_SQLQuery2.sql
-
-Python ETL Notebook:https://github.com/Naveenkarthik23/Pizza_Sales/blob/main/Pizza_Sales_Python.ipynb
-
-
 Dashboard Images 2:![power bi dashboard 2](https://github.com/user-attachments/assets/8b83beaa-2168-474b-a903-93cd978b3480)
 
