@@ -260,5 +260,12 @@ While most pizzas perform well, a few like Brie Carre require promotional strate
 
 The insights help management optimize inventory, plan pricing strategies, schedule staff efficiently, and focus marketing on high-performing periods.
 
-Dashboard Images 2:![power bi dashboard 2](https://github.com/user-attachments/assets/8b83beaa-2168-474b-a903-93cd978b3480)
+
+
+
+
+
+
+
+
 
